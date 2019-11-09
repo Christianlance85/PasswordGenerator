@@ -38,4 +38,3 @@ The user will be prompted to choose from the following password criteria:
   * Uppercase characters
 
 
-## Credits
