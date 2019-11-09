@@ -1,65 +1,77 @@
 <!DOCTYPE html>
-<html lang="en-US">
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content="A simple, configurable password generator.">
-  <meta name="author" content="Nolan Holden">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <title>Password Generator</title>
-  <link rel="shortcut icon" type="image/x-icon" href="img/lock.ico"/>
-  <link rel="stylesheet" href="css/styles.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i|Roboto:300,300i&amp;subset=latin-ext">
-</head>
-<body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <!--[if lt IE 9]>
-    <div class="browser-support-message">
-      <p>Parts of this site will look outdated because we use modern web design techniques which do not display correctly in your current browser. Improve your web experience by surfing with a <a href="http://browsehappy.com/">modern browser</a>.</p>
-    </div>
-  <![endif]-->
-  <noscript>
-    <div>
-      <h3>JavaScript disabled!</h3>
-      <p>This page does not work without JavaScript.</p>
-    </div>
-  </noscript>
-  <div class="pageHead">
-    <h3>Password Generator</h3>
-    <p>Specify desired length and character set below.</p>
-  </div>
-  <hr>
-  <div class="main">
-    <div>
-      <h5>Length</h5>
-      <input type="number" id="passwordLength" class="inputNumber" value=15 min=0 max=6000 pattern="[0-9]">
-      </input>
-    </div>
-    <p><button id="abc" class="button1">Show advanced options</button></p>
-    <div id="advancedOptions" class="hiddenMenu">
-      <h5>Character Set</h5>
-      <h6><strong>(ASCII only)</strong></h6>
-      <div>
-        <div class="checkboxes">
-          <label><input type="checkbox" id="cbox1" checked="checked"> UPPER-CASE alphabet (A-Z)</label>
-          <label><input type="checkbox" id="cbox2" checked="checked"> lower-case alphabet (a-z)</label>
-          <label><input type="checkbox" id="cbox3" checked="checked"> Numbers (0-9)</label>
-          <label><input type="checkbox" id="cbox4" checked="checked"> Commonly-Allowed Symbols</label>
-          <label><input type="checkbox" id="cbox5"> All Keyboard Symbols</label>
+
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Christian Lance | Password Generator</title>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  </head>
+
+
+  <body background="assets/images/circles-light.png">
+
+    <nav class="navbar navbar-expand-lg navbar-light justify-content-around">
+                
+      <a class="navbar-brand" style="color: black" href="#"><h4>Password Generator</h4></a>
+           
+    </nav>
+        
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 mx-auto shadow p-3 mb-5 bg-white rounded">
+
+          <form class="p-5" style="border-bottom: 1px grey;">
+            
+            <div class="form-group">
+              
+              <label for="password"><h4>Generate a Password</h4></label>
+              
+              <hr>
+
+              <input type="text" readonly class="form-control-plaintext text-center rounded" id="displaypw" placeholder="Your Secure Password" style="height: 150px; border: 1px dotted #e9e9e9;">
+
+              <hr>
+
+            </div>
+            
+            <div class="button text-center">
+
+              <!-- Generates password when button is clicked -->
+              <button type="button" id="btngeneratepw" class="btn btn-danger rounded-pill mx-5" onclick="generatePassword()">Generate Password</button>
+
+              <!-- Copies to clipboard when the copy to clipboard button is clicked -->
+              <button type="button" id="btncopytoclip" class="btn btn-secondary rounded-pill mx-5" onclick="copyToClipboard()">Copy to Clipboard</button>
+
+            </div>
+
+          
+          </form>
+
         </div>
+
+
       </div>
-      <div>
-        <h5>Additional Characters</h5>
-        <input type="text" id="additionalCharacters" class="inputText" placeholder="e.g. ∭й@ж!⨇⅝Дфэ♕&amp;₤₡я">
-      </div>
+
+
     </div>
-    <div>
-      <button type="button" id="generateButton" class="button2">Generate!</button>
-    </div>
-    <div>
-      <textarea type="text" id="result" class="outputText"></textarea>
-    </div>
-  </div>
-  <hr>
-  <script type="text/javascript" src="js/scripts.min.js"></script>
-</body>
+
+    
+
+     <!-- JavaScript link -->
+     <script type="text/javascript" src="Assets/index.js"></script>
+
+  </body>
+
 </html>
