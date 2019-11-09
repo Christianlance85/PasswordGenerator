@@ -8,7 +8,7 @@ This is a GitHub repository for a password generator application.
 
 ## Screenshot of Completed Application
 
-![Password Generator Demo](./Assets/images/snippetReadme.png)
+![Password Generator Demo](/Assets/Images/snippetReadme.PNG)
 
 ## GitHub Pages Link
 
