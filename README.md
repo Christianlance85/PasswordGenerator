@@ -1,4 +1,4 @@
-# password-generator-homework3
+# PasswordGenerator
 This is a repository for the Vanderbilt Coding Bootcamp Homework 3
 
 ## Purpose
